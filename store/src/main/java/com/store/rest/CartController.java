@@ -68,10 +68,15 @@ public class CartController extends HttpServlet  {
         else{
             // String username = request.getParameter("username");
             Collection<Cart> users = cartService.showCart(username);
-            String retString = "";
+            String retString = "[\n";
+            int i =1;
             for(Cart cart: users) {
-                retString += cart.toString();
+                if(i++==users.size())
+                    retString += cart.toString() + "\n}";
+                else
+                    retString += cart.toString() + "\n},\n";
             }
+            retString += "\n]";
             return retString;
         }
 

@@ -50,9 +50,9 @@ public class Product {
     public String toString() {
         return "\t{\n\t"
                 + "\"itemId\": \"" + itemId + "\""
-                + ", \n\t\"name\": \"" + name + "\""
-                + ", \n\t\"msrp\": \"" + msrp + "\""
-                + ", \n\t\"salePrice\": \"" + salePrice + "\"\n"
-                + "}";
+                + ", \n\t\t\"name\": \"" + name + "\""
+                + ", \n\t\t\"msrp\": \"" + msrp + "\""
+                + ", \n\t\t\"salePrice\": \"" + salePrice + "\"\n"
+                + "\t\t}";
     }
 }

@@ -46,10 +46,10 @@ public class Cart {
 
 	@Override
 	public String toString() {
-		String retString = "[\n{\n"
-				+ "\"cartId\": \"" + cartId + "\""
-				+ ", \n\"purchased\": \"" + purchased + "\""
-				+ ", \n\"items\": [\n";
+		String retString = "{\n" +
+				"\t\"cartId\": \"" + cartId + "\""
+				+ ", \n\t\"purchased\": \"" + purchased + "\""
+				+ ", \n\t\"items\": [\n";
 		String temp = "";
 		int i =1;
 		for(Product product: items) {
@@ -59,7 +59,7 @@ public class Cart {
 				temp += product.toString() + ",\n";
 		}
 		retString += temp;
-		retString += "]\n}\n]";
+		retString += "\n\t]";
 		return retString;
 	}
 }
